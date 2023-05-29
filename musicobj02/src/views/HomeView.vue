@@ -14,19 +14,33 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
+<<<<<<< HEAD
+import TopNav from '@/components/TopNav.vue'
+import IconList from '@/components/IconList.vue'
+import MusicList from '@/components/MusicList.vue'
+import SwiperCom from '@/components/SwiperCom.vue'
+=======
 import topNav from '@/components/TopNav.vue'
 import swiperCom from '@/components/SwiperCom.vue'
 import iconList from '@/components/IconList.vue'
 import musicList from '@/components/MusicList.vue'
+>>>>>>> a807ee4b609b5613737e760da8e3284996ea4f5e
 
 export default {
   name: 'HomeView',
   components: {
     HelloWorld,
+<<<<<<< HEAD
+    TopNav,
+    SwiperCom,
+    IconList,
+    MusicList
+=======
     topNav,
     swiperCom,
     iconList,
     musicList
+>>>>>>> a807ee4b609b5613737e760da8e3284996ea4f5e
   }
 }
 </script>

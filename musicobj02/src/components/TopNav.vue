@@ -1,6 +1,22 @@
 <template>
     <div class="topNav">
         <div class="topLeft">
+<<<<<<< HEAD
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-liebiao"></use>
+            </svg>
+        </div>
+        <div class="topCenter">
+            <span class="navBtn">我的</span>
+            <span class="navBtn active">发现</span>
+            <span class="navBtn">云村</span>
+            <span class="navBtn">视频</span>
+        </div>
+        <div class="topRight">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-search"></use>
+            </svg>
+=======
          <svg class="icon" aria-hidden="true">
             <use xlink:href= "#icon-liebiao"></use>
          </svg>
@@ -15,16 +31,25 @@
          <svg class="icon" aria-hidden="true">
             <use xlink:href= "#icon-search"></use>
          </svg>
+>>>>>>> a807ee4b609b5613737e760da8e3284996ea4f5e
         </div>
     </div>
 </template>
 
 <script>
+<<<<<<< HEAD
+export default{
+    name:"TopNav"
+}
+</script>
+
+=======
 
 export default{
     name:'topnav',
 }
 </script>
+>>>>>>> a807ee4b609b5613737e760da8e3284996ea4f5e
 <style lang="less" scoped>
 .topNav{
     width: 7.5rem;

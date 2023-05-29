@@ -1,4 +1,33 @@
 <template>
+<<<<<<< HEAD
+    <div class="iconList">
+        <div class="iconItem">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-fanjutuijian"></use>
+            </svg>
+            <span>每日推荐</span>
+        </div>
+
+        <div class="iconItem">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-airec"></use>
+            </svg>
+            <span>私人FM</span>
+        </div>
+
+        <div class="iconItem">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-gedan"></use>
+            </svg>
+            <span>歌单</span>
+        </div>
+
+        <div class="iconItem">
+            <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-paihangbang"></use>
+            </svg>
+            <span>排行榜</span>
+=======
     <div class= "iconList">
         <div class="iconItem">
              <svg class="icon" aria-hidden="true">
@@ -23,14 +52,20 @@
             <use xlink:href= "#icon-paihangbang"></use>
          </svg>
          <span>排行榜</span>
+>>>>>>> a807ee4b609b5613737e760da8e3284996ea4f5e
         </div>
     </div>
 </template>
 
 <script>
+<<<<<<< HEAD
+export default{
+    name:"IconList"
+=======
 
 export default{
     name:'iconlist',
+>>>>>>> a807ee4b609b5613737e760da8e3284996ea4f5e
 }
 </script>
 
