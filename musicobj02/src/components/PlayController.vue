@@ -3,48 +3,44 @@
         <div class="left">
             <img :src="playlist[playCurrentIndex].al.picUrl" alt="">
             <div class="content">
-                <div class="title">{{playlist[playCurrentIndex].name}}</div>
-                <div class="tips">横滑可以切换上下首哦</div>
+                <div class="title">追梦赤子心</div>
+                <div class="tips">横划可以切换上下首哦</div>
             </div>
         </div>
         <div class="right">
             <svg class="icon" aria-hidden="true" @click="kai">
                 <use xlink:href="#icon-bofang1"></use>
             </svg>
-            <svg class="icon" aria-hidden="true" @click="ting">
+            <svg class="icon" aria-hidden="true"  @click="ting">
                 <use xlink:href="#icon-iconstop"></use>
             </svg>
             <svg class="icon" aria-hidden="true" >
                 <use xlink:href="#icon-liebiao1"></use>
             </svg>
         </div>
-        <!-- 如何获取播放歌曲的mp3地址   https://music.163.com/song/media/outer/url?id=歌曲id.mp3-->
-        <!-- contrlos audio标签属性，一般不显示 -->
-        <!-- audio play()  播放音乐  pause()  暂停音乐 -->
-
-        <audio ref="audio" :src=" ` https://music.163.com/song/media/outer/url?id=${playlist[playCurrentIndex].id}.mp3` "></audio>
+        <audio ref="audio" :src="`https://music.163.com/song/media/outer/url?id=${playlist[playCurrentIndex].id}.mp3`" ></audio>
     </div>
 </template>
 
 <script>
 import { mapState } from 'vuex';
-export default {
-    name: "playcontroller",
+export default{
+    name:"playcontroller",
     computed:{
-        ...mapState(["playlist","playCurrentIndex"])  //获取正在播放歌曲列表以及正在播放歌曲下标
+        ...mapState(["playlist","playCurrentIndex"])
     },
-    methods:{
-        kai(){
-            // this.$refs.audio  获取audio标签
-            this.$refs.audio.play();
-        },
-        ting(){
-            this.$refs.audio.pause();
-        }
-    }
+    methods: {
+       kai(){
+        //this.#refs,audio 获取
+        this.$refs.audio.play();
+       } ,
+       ting(){
+        //this.#refs,audio 获取
+        this.$refs.audio.pause();
+       } 
+    },
 }
 </script>
-
 <style lang="less">
         .playController {
             background: #fff;
