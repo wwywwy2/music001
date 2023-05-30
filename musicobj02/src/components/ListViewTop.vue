@@ -3,7 +3,7 @@
         <img class="bg" :src="playlist.coverImgUrl" alt="">
         <div class="listViewTopNav">
             <div class="back">
-                <svg class="icon" aria-hidden="true" @click="$event=>$router.go(-1)">
+                <svg class="icon" aria-hidden="true" @click="$event => $router.go(-1)">
                     <use xlink:href="#icon-sdf"></use>
                 </svg>
                 <div class="title">
@@ -32,12 +32,12 @@
             <div class="contentRight">
                 <h2>{{ playlist.name }}</h2>
                 <div class="author">
-                    <img class="header" src="https://p1.music.126.net/457V7GCxxmw9vfO16PZEpg==/109951163937759685.jpg"
+                    <img class="header" :src="playlist.coverImgUrl"
                         alt="">
                     <span>{{ playlist.creator.nickname }}</span>
                 </div>
                 <div class="description">
-                {{ playlist.description }}
+                    {{playlist.description}}
                 </div>
             </div>
         </div>
@@ -46,13 +46,13 @@
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-liebiao"></use>
                 </svg>
-                <span>{{ playlist.commentCount }}</span>
+                <span>{{playlist.commentCount}}</span>
             </div>
             <div class="iconItem">
                 <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-iconfontzhizuobiaozhun20"></use>
                 </svg>
-                <span> {{ playlist.shareCount }}</span>
+                <span>{{playlist.shareCount}}</span>
             </div>
 
             <div class="iconItem">

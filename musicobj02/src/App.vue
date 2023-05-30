@@ -1,16 +1,15 @@
 <template>
-  <div>
-      <router-view/>
-      <play-controller></play-controller>
-  </div>
-
+  <nav>
+    <router-view/>
+    <play-controller></play-controller>
+  </nav>
 </template>
 
 <script>
-import PlayController from './components/PlayController.vue';
-export default {
+import playController from './components/PlayController.vue'
+export default{
   components:{
-    PlayController
+    playController
   }
 }
 </script>

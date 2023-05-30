@@ -1,8 +1,8 @@
 import { createStore } from 'vuex'
 
 export default createStore({
-  state: {
-    playlist:[   //音乐播放列表
+  state: {  //组件之间共享的数据
+    playlist:[   //音乐播放列表  是一个数组，准备一条默认数据：断桥残雪
       {
         name: "断桥残雪", 
         id: 167937, 
@@ -15,13 +15,17 @@ export default createStore({
         }
       } 
     ],
-    playCurrentIndex:0 //当前播放音乐在播放列表中的下标
+    playCurrentIndex:0  //当前播放音乐在音乐列表中的下标
+
   },
   getters: {
   },
   mutations: {
-    setPlayList(state,value){
+    setPlayList(state,value){   //定义一个函数用来修改state中播放列表的数据
       state.playlist = value;
+    },
+    setPlayIndex(state,value){   //定义一个函数用来修改state中播放列表的数据
+      state.playCurrentIndex = value;
     }
   },
   actions: {
