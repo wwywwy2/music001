@@ -32,6 +32,8 @@
 <script>
 import { mapState } from 'vuex';
 import playMusic from "@/components/PlayMusic.vue"
+import{ getLyric }from "@/api/index"
+import store from "@/store/index"
 export default {
     name: "playcontroller",
     data(){
@@ -42,6 +44,16 @@ export default {
     },
     components:{
         playMusic
+    },
+   async mounted(){   //view与model绑定成功之后
+       var res = await getLyric(this.playlist[this.playCurrentIndex].id);
+       console.log(res.data.lrc.lyric);
+       store.commit("setLyric",res.data.lrc.lyric)
+    },
+    async updated(){   //view与model绑定成功之后
+       var res = await getLyric(this.playlist[this.playCurrentIndex].id);
+       //console.log(res);
+       store.commit("setLyric",res.data.lrc.lyric)
     },
     computed:{
         ...mapState(["playlist","playCurrentIndex"])  //获取正在播放歌曲列表以及正在播放歌曲下标
